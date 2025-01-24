@@ -26,3 +26,45 @@ main_program{
         cout << sum;
     
 }
+
+/*
+You are tasked to write a simplecpp program that takes an integer N as input and calculates the sum of its digits.
+
+
+Input Format:
+
+
+A single integer N.
+
+
+Output Format:
+
+
+A single integer representing the sum of the digits of N.
+
+
+Assumptions on input:
+
+
+N lies in between -1000 to 1000, both inclusive.
+
+The sum of digits is calculated using the absolute value of N (ignoring the sign).
+
+
+Note:
+
+
+Do not write any C++ statements for printing general messages. For example, the following should NOT be present in your program:
+
+
+cout << "Enter a number:",  
+
+
+cout << "The computed answer is", etc.
+
+
+cout should be used to print only the computed final output. In addition, do not print unnecessary spaces unless specified in the program.
+
+
+If any hard coding is found, or if any test case passes by merely writing a cout statement and without any logic, then the marks for that test case will NOT be awarded.
+*/

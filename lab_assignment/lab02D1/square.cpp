@@ -42,3 +42,14 @@ main_program{
         cout << "* " ;
     }
 }
+
+/*
+Write a cpp program that takes an integer n as input and print a SQUARE pattern. The edges of the square should be made of asterisks (*).
+
+The space inside the square (from top-left to bottom-right) should alternate between hyphens (-) and plus signs (+), starting with a hyphen (-) on the top-left.
+
+Run your program on the terminal to view a nice representation of the pattern. Bodhitree may not give you the same graphical view. 
+
+Example for,
+
+*/
