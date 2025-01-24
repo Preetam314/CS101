@@ -3,7 +3,7 @@
 main_program{
     int n;
     cin >> n;
-    int j;
+    int j = 0;
     repeat(n){
         cout << "* " ;
     }
