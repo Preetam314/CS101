@@ -1,6 +1,6 @@
 #include<simplecpp>
 
-// this program is long and lokks like hardcoding because function, arrays and other topic have not been used . this is made using if statements only
+// this program is long and lokks like hardcoding because function, arrays and other topic have not been used . this is made using if statements only, 
 main_program{
     int year;
     int day;
