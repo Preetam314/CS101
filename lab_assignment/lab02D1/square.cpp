@@ -3,7 +3,7 @@
 main_program{
     int n;
     cin >> n;
-    int j = 0;
+    int j =0;
     repeat(n){
         cout << "* " ;
     }
@@ -18,8 +18,9 @@ main_program{
                 else{
                     cout << "+ " ;
                 }
-        }
         j++;
+        }
+        
         }
         else{
             for(int i = 0; i < (n -2); i++){
