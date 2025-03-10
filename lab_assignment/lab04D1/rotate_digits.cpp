@@ -1,62 +1,55 @@
-#include <simplecpp>
+#include<iostream>
+using namespace std;
 
-int Lrotate(int& n){
-    int fix = n;
-    int i;
-    int intermidiate = n;
-
-    for(i = 0; intermidiate > 0; i++){
-        intermidiate = intermidiate/10;
-    }
-    intermidiate = n;
-    n =  n/pow(10, i - 1);
-    intermidiate = -(n*pow(10, i - 1) - intermidiate);
-    intermidiate = intermidiate*10 + n;
-    n = fix;
-
+int rotateMe(int n, string c){
+    int digit = n;
+    int lastDigit = 0;
+    int k = 1;
     
-    return intermidiate;
-}
 
-
-int Rrotate(int& n){
-    int fix = n;
-    int intermidiate = n;
-    int i;
-    for(i = 0; intermidiate > 0; i++){
-        intermidiate = intermidiate/10;
-    }
-    intermidiate = n%10;
-    n = (n/10) + intermidiate*pow(10, i - 1) ;
-
-    intermidiate = n;
-    n = fix;
-    return intermidiate;
-}
-
-
-int rotateMe(int& n, string& c){
-    int k = n;
-    for(int i = 0; i <= c.size(); i++){
+    for(int i = 0; i < c.size(); i++){
         if(c[i] == 'R'){
-            k = Rrotate(k);
+            k = 1;
+            for(int i = 0;digit > 0; i++){
+                digit = digit/10;
+                k = k*10;
+                if(digit/10 == 0){
+                    lastDigit = digit%10;
+                    digit = n;
+                    digit = digit - lastDigit*k;
+                    digit = digit*10 + lastDigit;
+                    break;
+                }
+            }
         }
-        if(c[i] == 'L'){
-            k = Lrotate(k);
+        else if(c[i] == 'L'){
+            k = 1;
+            for(int i = 1; digit > 0; i++){
+                digit = digit/10;
+                k = k*10;
+                if(digit/10 == 0){
+                    lastDigit = digit%10;
+                    digit = n;
+                    digit = digit - lastDigit*k;
+                    digit = digit + (n%10)*k;
+                    break;
+                }
+            }
+
         }
-        if(c[i] == 'X'){
+        else{
             break;
         }
     }
+    return digit;
 
-    return k;
 
 }
 
-main_program{
+int main(){
     int n; cin >> n;
     string c; cin >> c;
 
-    cout << rotateMe(n, c) << endl;
+    cout << rotateMe(n, c);
 
 }
